@@ -95,9 +95,7 @@ nav ul a:hover::after{
 
 /*---------about----------*/
 #about{
-    padding-top: 100px;
-    padding-bottom: 50px;
-    padding: 10%;
+    padding: 50px 10%;
 }
 
 .row{
@@ -252,14 +250,13 @@ nav ul a:hover::after{
 .button{
     display: block;
     width: fit-content;
-    margin: 50px 0;
+    margin: 50px 42%;
     border: 1px solid #F76F9C;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
     color: #fff;
     transition: background 0.5s;
-    /* transition: box-shadow 0.5s; */
 }
 
 .button:hover{
