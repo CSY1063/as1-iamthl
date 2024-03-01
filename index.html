@@ -3,9 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hai Linh Tran</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    
 </head>
 <body>
+
+<header class="header"> 
+    <nav class="container" id="abc">
+        <h1 class="logo">LINH</h1>
+
+        <!-- <div class="nav-menu show-menu"> -->
+        <div id="nav-menu" class="show-menu">
+            <ul class="menu-list">
+                <li><a href="#header">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#projects">PROJECTS</a>
+                    <ul>
+                        <li><a href="#">Web</a></li>
+                        <li><a href="#">Electronics</a></li>
+                        <li><a href="#">Research</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+
+        </div>
+
+        
+    </nav>
+</head>
+<!-- <div class="header"> 
+    <div class="container">
+        <nav>
+            <h1>LINH</h1>
+            <ul class="menu"> 
+                <li><a href="#header">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav> -->
+        <!-- <div class="header-text">
+            <p>Software Engineer Student</p>
+            <h1>Hello, I'm <span>Linh</span><br>Tran from Vietnam</h1>
+        </div> -->
+    <!-- </div> -->
+<!-- </div>  -->
+<!---------about---------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="img/avatar.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About me</h1>
+                <p>aaaaaaaaabbbbbbbccccccc thich anh Nguyen Hai Linh nhat tren doi</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>SAP Analytics Cloud</span><br>Participated in "ASEAN Data Science Explorers 2023 Enablement Session"</li>
+                        <li><span>Website Coding</span><br>Completed "Web creator basic course" at MindX Technology & Startup School</li>
+                        <li><span>Mathemathics</span><br>SAT Math: 780/800<br>99th Nationally Representative Sample Percentile</li>
+                        <li><span>Foreign Languages</span><br>English: B2<br>German: Level B2 - C1</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>SAP </span><br>Participated in "ASEAN Data Science Explorers 2023 Enablement Session"</li>
+                        <li><span>Website Coding</span><br>Completed "Web creator basic course" at MindX Technology & Startup School</li>
+                        <li><span>Mathemathics</span><br>SAT Math: 780/800<br>99th Nationally Representative Sample Percentile</li>
+                        <li><span>Foreign Languages</span><br>English: B2<br>German: Level B2 - C1</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>SAP Analytics Cloud</span><br>Participated in "ASEAN Data Science Explorers 2023 Enablement Session"</li>
+                        <li><span>Web</span><br>Completed "Web creator basic course" at MindX Technology & Startup School</li>
+                        <li><span>Mathemathics</span><br>SAT Math: 780/800<br>99th Nationally Representative Sample Percentile</li>
+                        <li><span>Foreign Languages</span><br>English: B2<br>German: Level B2 - C1</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------project---------->
+
+<!---------contact---------->
+
+<script>
     
+    // const navMenu = document.getElementsByClassName("nav-menu")
+    // const header = document.getElementsById("abc")
+    // menuOpen = document.getElementsByClassName("menu-open")
+    // menuClose = document.getElementsByClassName("menu-close")
+
+    // if(menuOpen){
+    //     menuOpen.addEventListener('click', () => {
+    //         header.classList.add('nav-menu')
+    //     })
+    // }
+
+    // if(menuClose){
+    //     menuClose.addEventListener('click', () => {
+    //         header.classList.remove('nav-menu')
+    //     })
+    // }
+</script>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    var menuhuhu= document.getElementsByClassName("menu");
+
+    function openmenu(){
+        menuhuhu.style.right = "0";
+    }
+    function closemenu(){
+        menuhuhu.style.right = "-200px";
+    }
+</script>
+<script src="main.js"></script>
+
 </body>
 </html>

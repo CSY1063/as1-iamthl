@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #080808;
+    color: #fff;
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/background.png);
+    background-size: cover;
+    background-position: center;
+}
+
+nav{
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* top: 0;
+    left: 0;
+    z-index: ; */
+    background-color: #000000;
+    color: #fff;
+}
+
+.logo{
+    font-weight: bold;
+    font-size: 50px;
+    text-shadow: 5px 10px #F76F9C;
+    color: #fff;
+}
+
+nav ul a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style-type: none;
+}
+
+.menu-open{
+    color: #fff;
+    position: fixed;
+    right:5%;
+}
+
+
+nav ul a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #F76F9C;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul a:hover::after{
+    width: 100%;
+} 
+
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+    margin-left: 20px;
+    padding: 10px 10%;
+}
+
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text h1 span{
+    color: #F76F9C;
+}
+
+
+/*---------about----------*/
+#about{
+    padding-top: 100px;
+    padding-bottom: 50px;
+    padding: 10%;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2 img{
+    width: 200px;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.sub-title{
+    text-shadow: 5px 10px #F76F9C;
+    font-size: 60px;
+    font-weight: 600;
+    color:#fff;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px -0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #F76F9C;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 100%;
+}
+
+.tab-contents ul li{
+    margin: 10px 0;
+    font-size: 14px;
+    list-style: none;
+}
+
+.tab-contents ul li span{
+    color: #F76F9C;
+    font-size: 14px;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+
