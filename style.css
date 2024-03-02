@@ -250,16 +250,77 @@ nav ul a:hover::after{
 .button{
     display: block;
     width: fit-content;
-    margin: 50px 42%;
+    margin-top: 50px;
     border: 1px solid #F76F9C;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
-    color: #fff;
+    color: #fff;    
+    background: #000000;
     transition: background 0.5s;
+    font-weight: bold;
 }
 
 .button:hover{
     background: #F76F9C;
     box-shadow: 0 8px 24px #F76F9C;
+}
+
+.button.button1{
+    margin-left: 42%;
+}
+
+/*---------contact----------*/
+#contact{
+    padding: 50px 10%;
+}
+
+.contact-col-1{
+    flex-basis: 30%;
+}
+
+.contact-col-1 p{
+    margin-top: 10%;
+}
+
+.contact-col-2{
+    flex-basis: 60%;
+}
+
+.button.button2{
+    display: inline-block;
+}
+
+.contact-col-2 form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #fff;
+    padding: 15px;
+    margin: 15px 0;
+    color: #000000;
+    font-size: 17px;
+    border-radius: 6px;
+}
+
+.icons{
+    color:#fff;
+}
+
+.button.button3{
+    font-size: 17px;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #fff;
+    font-weight: 300;
+    margin-top: 20px;
+    color: #5f595bd3;
 }
