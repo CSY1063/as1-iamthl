@@ -1,3 +1,13 @@
+
+
+
+function toggleBar() {
+    const element = document.getElementById('nav-menu');
+    element.hidden=!element.hidden;
+    // element.classList.toggle("show-menu");
+}
+
+
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
 
@@ -11,4 +21,6 @@ function opentab(tabname) {
     event.currentTarget.classList.add("active-link");
     document.getElementById(tabname).classList.add("active-tab");
 };
+
+
     
