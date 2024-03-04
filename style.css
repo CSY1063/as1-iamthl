@@ -14,6 +14,11 @@ body{
     color: #fff;
 }
 
+.container{
+    padding: 10px 10%;
+}
+
+/*---------home----------*/
 .header{
     width: 100%;
     height: 100vh;
@@ -22,23 +27,31 @@ body{
     background-position: center;
 }
 
+/*---nav---*/
 nav{
-    height: 40px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    /* top: 0;
-    left: 0;
-    z-index: ; */
+    justify-content: space-between;
+    flex-wrap: wrap;
     background-color: #000000;
-    color: #fff;
+    position: fixed;
+    top:0%;
+    width: 100%;
+    z-index:1;
+
 }
 
-.logo{
+nav h1{
     font-weight: bold;
     font-size: 50px;
     text-shadow: 5px 10px #F76F9C;
-    color: #fff;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+    text-align: right;
 }
 
 nav ul a{
@@ -46,20 +59,7 @@ nav ul a{
     text-decoration: none;
     font-size: 18px;
     position: relative;
-    margin: 0;
-    padding: 0;
 }
-
-li{
-    list-style-type: none;
-}
-
-.menu-open{
-    color: #fff;
-    position: fixed;
-    right:5%;
-}
-
 
 nav ul a::after{
     content: '';
@@ -92,11 +92,18 @@ nav ul a:hover::after{
     color: #F76F9C;
 }
 
+.menu-open{
+    color: #fff;
+    position: fixed;
+    right:5%;
+    top:3%;
+    z-index:1;
+}
 
 /*---------about----------*/
-#about{
+/* #about{
     padding: 50px 10%;
-}
+} */
 
 .row{
     display: flex;
@@ -123,7 +130,7 @@ nav ul a:hover::after{
 
 .sub-title{
     text-shadow: 5px 10px #F76F9C;
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 600;
     color:#fff;
 }
@@ -177,9 +184,9 @@ nav ul a:hover::after{
 
 
 /*---------project----------*/
-#projects{
+/* #projects{
     padding: 50px 10%;
-}
+} */
 
 .project-list{
     display: grid;
@@ -271,9 +278,9 @@ nav ul a:hover::after{
 }
 
 /*---------contact----------*/
-#contact{
+/* #contact{
     padding: 50px 10%;
-}
+} */
 
 .contact-col-1{
     flex-basis: 30%;
@@ -307,20 +314,38 @@ form input, form textarea{
     border-radius: 6px;
 }
 
-.icons{
-    color:#fff;
-}
-
 .button.button3{
     font-size: 17px;
+}
+
+/*---------footer----------*/
+.footer{
+    background-color: #fff;
+    padding-block: 50px 30px;
+    color: #000000;
+}
+
+.footer h1{
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 20px;
 }
 
 .copyright{
     width: 100%;
     text-align: center;
     padding: 25px 0;
-    background: #fff;
     font-weight: 300;
     margin-top: 20px;
-    color: #5f595bd3;
+}
+
+.icons{
+    font-size: 25px;
+    text-align: center;
+}
+
+.icons a{
+    color: #000000;
+    text-decoration: none;
 }
