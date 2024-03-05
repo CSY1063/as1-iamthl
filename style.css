@@ -10,7 +10,7 @@ html{
 }
 
 body{
-    background: #080808;
+    background: #000000;
     color: #fff;
 }
 
@@ -18,40 +18,40 @@ body{
     padding: 10px 10%;
 }
 
-/*---------home----------*/
+/*---------nav bar & header----------*/
 .header{
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     background-image: url(img/background.png);
     background-size: cover;
     background-position: center;
+    margin-top: -170px
 }
 
-/*---nav---*/
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    background-color: #000000;
+    flex-wrap: nowrap;
+    background-color: hsla(0, 0%, 0%, 0.617);
+    backdrop-filter: blur(20px);
     position: fixed;
-    top:0%;
+    top: 0;
     width: 100%;
-    z-index:1;
-
+    z-index: 1;
 }
 
 nav h1{
     font-weight: bold;
     font-size: 50px;
     text-shadow: 5px 10px #F76F9C;
+    padding: 0 20px 10px;
 }
 
 nav ul li{
     display: inline-block;
     list-style: none;
     margin: 0 20px;
-    text-align: right;
 }
 
 nav ul a{
@@ -77,10 +77,10 @@ nav ul a:hover::after{
 } 
 
 .header-text{
-    margin-top: 20%;
+    margin-top: 15%;
     font-size: 30px;
     margin-left: 20px;
-    padding: 10px 10%;
+    padding: 250px 10%;
 }
 
 .header-text h1{
@@ -95,20 +95,18 @@ nav ul a:hover::after{
 .menu-open{
     color: #fff;
     position: fixed;
-    right:5%;
-    top:3%;
-    z-index:1;
+    right: 5%;
+    top: 4%;
+    z-index: 0;
+
 }
 
 /*---------about----------*/
-/* #about{
-    padding: 50px 10%;
-} */
-
 .row{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-flow: row;
+    gap: 150px;
 }
 
 .about-col-1{
@@ -137,11 +135,12 @@ nav ul a:hover::after{
 
 .tab-titles{
     display: flex;
-    margin: 20px -0 40px;
+    margin: 50px 0 50px;
+    justify-content: flex-start;
+    gap: 50px;
 }
 
 .tab-links{
-    margin-right: 50px;
     font-size: 18px;
     font-weight: 500;
     cursor: pointer;
@@ -184,10 +183,6 @@ nav ul a:hover::after{
 
 
 /*---------project----------*/
-/* #projects{
-    padding: 50px 10%;
-} */
-
 .project-list{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -278,10 +273,6 @@ nav ul a:hover::after{
 }
 
 /*---------contact----------*/
-/* #contact{
-    padding: 50px 10%;
-} */
-
 .contact-col-1{
     flex-basis: 30%;
 }
@@ -318,34 +309,58 @@ form input, form textarea{
     font-size: 17px;
 }
 
-/*---------footer----------*/
-.footer{
-    background-color: #fff;
-    padding-block: 50px 30px;
-    color: #000000;
-}
+/*---------responsive----------*/
+@media only screen and (max-width: 1023px){
+    header{
+        background-image: url(img/background.png);
+    }
 
-.footer h1{
-    text-align: center;
-    font-size: 16px;
-    font-weight: bold;
-    margin: 20px;
-}
+    .show-menu{
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: hsla(0, 100%, 99%, 0.3);
+        width: 50%;
+        height: 400%;
+        padding: 3rem 0 0 5rem;
+        backdrop-filter: blur(24px);
+        transition: right 0.3s;
+    }
 
-.copyright{
-    width: 100%;
-    text-align: center;
-    padding: 25px 0;
-    font-weight: 300;
-    margin-top: 20px;
-}
+    .menu-list{
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+    }
 
-.icons{
-    font-size: 25px;
-    text-align: center;
-}
+    nav h1{
+        padding: 0;
+    }
 
-.icons a{
-    color: #000000;
-    text-decoration: none;
+    nav ul li a{
+        color: #fff;
+        font-weight: medium;
+        transition: color 0.3s;
+    }
+
+    nav ul li a:hover{
+        color: #F76F9C;
+    }
+
+    .menu-open{
+        position: fixed;
+        top: 1rem;
+        right: 1.5rem;
+        z-index: 1;
+    }
+
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+
+    .header-text h1{
+        font-size: 30px;
+    }
+    
 }
