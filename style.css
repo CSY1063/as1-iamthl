@@ -5,13 +5,21 @@
     box-sizing: border-box;
 }
 
+:root{
+    --color1: #000000;
+    --color2: #F76F9C;
+    --color3: #fff;
+    --textShadow: 5px 10px #F76F9C; 
+
+}
+
 html{
     scroll-behavior: smooth;
 }
 
 body{
-    background: #000000;
-    color: #fff;
+    background: var(--color1);
+    color: var(--color3);
 }
 
 .container{
@@ -44,7 +52,7 @@ nav{
 nav h1{
     font-weight: bold;
     font-size: 50px;
-    text-shadow: 5px 10px #F76F9C;
+    text-shadow: var(--textShadow);
     padding: 0 20px 10px;
 }
 
@@ -65,7 +73,7 @@ nav ul a::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #F76F9C;
+    background: var(--color2);
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -89,7 +97,7 @@ nav ul a:hover::after{
 }
 
 .header-text h1 span{
-    color: #F76F9C;
+    color: var(--color2);
 }
 
 .menu-open{
@@ -98,7 +106,6 @@ nav ul a:hover::after{
     right: 5%;
     top: 4%;
     z-index: 0;
-
 }
 
 /*---------about----------*/
@@ -127,7 +134,7 @@ nav ul a:hover::after{
 }
 
 .sub-title{
-    text-shadow: 5px 10px #F76F9C;
+    text-shadow: var(--textShadow);
     font-size: 50px;
     font-weight: 600;
     color:#fff;
@@ -151,7 +158,7 @@ nav ul a:hover::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #F76F9C;
+    background: var(--color2);
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -169,7 +176,7 @@ nav ul a:hover::after{
 }
 
 .tab-contents ul li span{
-    color: #F76F9C;
+    color: var(--color2);
     font-size: 14px;
 }
 
@@ -264,7 +271,7 @@ nav ul a:hover::after{
 }
 
 .button:hover{
-    background: #F76F9C;
+    background: var(--color2);
     box-shadow: 0 8px 24px #F76F9C;
 }
 
@@ -297,7 +304,7 @@ form input, form textarea{
     width: 100%;
     border: 0;
     outline: none;
-    background: #fff;
+    background-color: #fff;
     padding: 15px;
     margin: 15px 0;
     color: #000000;
@@ -344,14 +351,14 @@ form input, form textarea{
     }
 
     nav ul li a:hover{
-        color: #F76F9C;
+        color: var(--color2);
     }
 
     .menu-open{
         position: fixed;
         top: 1rem;
         right: 1.5rem;
-        z-index: 1;
+        display: block;
     }
 
     .header-text{
