@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+:root{
+    --color1: #000000;
+    --color2: #F76F9C;
+    --color3: #fff;
+    --textShadow: 5px 10px #F76F9C; 
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: var(--color1);
+    color: var(--color3);
+    display: grid;
+}
+
+.container{
+    padding: 100px 10%;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row;
+    gap: 150px;
+}
+
+.button{
+    display: block;
+    width: fit-content;
+    margin-top: 50px;
+    border: 1px solid var(--color2);
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--color3);    
+    background: var(--color1);
+    transition: background 0.3s;
+    font-weight: bold;
+}
+
+.button:hover{
+    background: var(--color2);
+    box-shadow: 0 8px 24px var(--color2);
+}
+
+.button.button1{
+    margin-left: 42%;
+}
+
+#contact{
+    margin-bottom: 150px;
+    display: inline-block;
+}
+
+.contact-col-1{
+    flex-basis: 35%;
+}
+
+.contact-col-1 p{
+    margin-top: 10%;
+}
+
+.contact-col-2{
+    flex-basis: 90%;
+}
+
+.button.button2{
+    display: inline-block;
+}
+
+.contact-col-2 form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background-color: var(--color3);
+    padding: 15px;
+    margin: 15px 0;
+    color: var(--color1);
+    font-size: 17px;
+    border-radius: 6px;
+}
+
+.button.button3{
+    font-size: 17px;
+}
+
+@media only screen and (max-width: 1023px){
+
+    .about-col-2{
+        font-size: 100px;
+    }
+    .contact-col-1, .contact-col-2{
+        flex-basis: 100%;
+    }
+}
+
