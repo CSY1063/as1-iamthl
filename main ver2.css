@@ -29,7 +29,7 @@
 
 header{
     grid-area: header;
-    background-color: rgb(0, 0, 0);
+    background-color: var(--color1);
     box-sizing: border-box;
     position: relative;
 }
@@ -63,7 +63,7 @@ nav ul li{
 }
 
 nav ul a{
-    color: #fff;
+    color: var(--color3);
     text-decoration: none;
     font-size: 18px;
     position: relative;
@@ -85,7 +85,7 @@ nav ul a:hover::after{
 } 
 aside.left-aside{
     grid-area: left-sidebar;
-    background-color: black;
+    background-color: var(--color1);
 }
 main{
     grid-area: main;
@@ -99,19 +99,17 @@ main{
 }
 aside.right-aside{
     grid-area: right-sidebar;
-    background-color: black;
+    background-color: var(--color1);
 }
 footer{
     grid-area: footer;
 }
 
 /* Nav bar */
-
 nav h1{
     font-weight: bold;
     font-size: 50px;
     text-shadow: var(--textShadow);
-    padding: 0 20px 10px;
 }
 
 .logo{
@@ -147,6 +145,13 @@ nav ul li{
 
 .header-text h1 span{
     color: var(--color2);
+}
+
+.menu-open{
+    color: var(--color3);
+    position: fixed;
+    right: 5%;
+    top: 4%;
 }
 
 /* About */
@@ -400,4 +405,32 @@ form input, form textarea{
     display: flex;
     color: var(--color1);
     text-decoration: none;
+}
+
+@media only screen and (max-width: 800px){
+    .show-menu{
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: hsla(0, 100%, 99%, 0.3);
+        width: 50%;
+        height: 400%;
+        padding: 3rem 0 0 5rem;
+        backdrop-filter: blur(24px);
+        transition: right 0.3s;
+    }
+
+    .menu-list{
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+    }
+
+    .menu-open{
+        position: fixed;
+        top: 2rem;
+        padding: 0 10%;
+        display: block;
+        z-index: 1000;
+    }
 }
