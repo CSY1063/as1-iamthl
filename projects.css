@@ -158,6 +158,34 @@ nav ul li{
     transition: 0.4s;
 }
 
+.container .project .project-card::before{
+    content:'';
+    position: absolute;
+    background-image: conic-gradient(transparent,transparent,transparent,var(--color2));
+    width: 800px;
+    height: 800px;
+    animation: animate 4s linear infinite;
+}
+.container .project .project-card::after{
+    content:'';
+    position: absolute;
+    background-image: conic-gradient(transparent,transparent,transparent,var(--color3));
+    width: 800px;
+    height: 800px;
+    animation: animate 4s linear infinite;
+    animation-delay: -2s;
+}
+
+@keyframes animate
+{
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .container .project .project-card span{
     position: absolute;
     inset: 5px;
