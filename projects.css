@@ -153,6 +153,19 @@ nav ul li{
     overflow: hidden;
 }
 
+.container .project .project-card:hover{
+    height: 500px;
+    transition: 0.4s;
+}
+
+.container .project .project-card span{
+    position: absolute;
+    inset: 5px;
+    border-radius: 15px;
+    background: var(--color1);
+    z-index: 1;
+}
+
 .container .project .project-card .card-img{
     position: absolute;
     width: 300px;
@@ -165,6 +178,12 @@ nav ul li{
 
 }
 
+.container .project .project-card:hover .card-img{
+    transition: 0.4s;
+    top: 0;
+    scale: 0.75;
+}
+
 .container .project .project-card .card-img img{
     position: absolute;
     width: 100%;
@@ -175,6 +194,23 @@ nav ul li{
     border-radius: 10px;
 }
 
+.container .project .project-card .card-content{
+    position: absolute;
+    width: 100%;
+    padding: 0 30px;
+    text-align: center;
+    top: 255px;
+    height: 30px;
+    overflow: hidden;
+    color: var(--color3);
+    z-index: 2;
+}
+
+.container .project .project-card:hover .card-content{
+    transition: 0.3s;
+    top: 200px;
+    height: 250px;
+}
 
 .button{
     display: inline-block;
@@ -194,6 +230,13 @@ nav ul li{
     background: var(--color2);
     box-shadow: 0 0 40px var(--color2);
 }
+
+.container .project .project-card .card-content p{
+    position: relative;
+    top: 15px;
+    overflow:hidden;
+}
+
 
 /*---------footer----------*/
 .footer{
