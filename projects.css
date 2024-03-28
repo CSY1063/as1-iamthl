@@ -58,7 +58,7 @@ nav ul li{
 }
 
 nav ul a{
-    color: #fff;
+    color: var(--color3);
     text-decoration: none;
     font-size: 18px;
     position: relative;
@@ -240,7 +240,7 @@ nav ul li{
     height: 250px;
 }
 
-.button{
+.open-btn{
     display: inline-block;
     width: fit-content;
     margin-top: 50px;
@@ -254,7 +254,7 @@ nav ul li{
     font-weight: bold;
 }
 
-.button:hover{
+.open-btn:hover{
     background: var(--color2);
     box-shadow: 0 0 40px var(--color2);
 }
@@ -263,6 +263,105 @@ nav ul li{
     position: relative;
     top: 15px;
     overflow:hidden;
+}
+/* Pop up */
+.project .popup-view{
+    z-index: 4;
+    background-color: hsla(0, 0%, 0%, 0.2);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0)
+}
+
+.project .active{
+    transform: scale(1);
+}
+
+.project .popup-card{
+    position: relative;
+    display: flex;
+    width: 1200px;
+    height: 500px;
+    margin: 20px;
+}
+
+.project .popup-card .popup-img{
+    z-index: 4;
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 70%; */
+}
+
+.project .popup-card .popup-img{
+    z-index: 4;
+    position: relative;
+    /* display:flex; */
+    /* justify-content: center;
+    align-items: center; */
+    width: 49%;
+    top: 50%;
+    left: 26%;
+    background-image: url(img/web1.png); 
+    background-size: 100% 100%;
+    border-radius: 10px;
+    transform: translate(-50%,-50%);
+    animation: slider 8s infinite linear;
+}
+
+
+@keyframes slider{
+    0%{
+        background-image: url(img/web1.png); 
+    }
+
+    50%{
+        background-image: url(img/project3.png);
+    }
+}
+.project .popup-card .info{
+    z-index: 4;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.project .popup-card .info p{
+    font-size:12px;
+    padding-top: 30px;
+}
+
+.project .popup-card .close-btn{
+    color: #555;
+    z-index: 5;
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    font-size: 20px;
+    margin: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.project-detail{
+    background-color: #F76F9C;
+}
+
+#overlay{
+    position: fixed;
 }
 
 
