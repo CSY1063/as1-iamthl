@@ -78,6 +78,11 @@ nav ul a::after{
 nav ul a:hover::after{
     width: 100%;
 } 
+
+.menu-open{
+    z-index: -1;
+}
+
 aside.left-aside{
     grid-area: left-sidebar;
     background-color: black;
@@ -236,7 +241,7 @@ nav ul li{
 
 .container .project .project-card:hover .card-content{
     transition: 0.3s;
-    top: 200px;
+    top: 225px;
     height: 250px;
 }
 
@@ -397,4 +402,38 @@ nav ul li{
     display: flex;
     color: var(--color1);
     text-decoration: none;
+}
+
+@media only screen and (max-width: 800px){
+    .show-menu{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 1000%;
+        padding-top: 8rem;
+        text-align: center;
+        transition: right 0.3s;
+        background-color: hsla(0, 0%, 0%, 0.617);
+    }
+
+    .logo{
+        font-size: 40px;
+    }
+
+    .menu-list{
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+    }
+
+    .menu-open{
+        position: fixed;
+        top: 2.2rem;
+        padding: 0 5%;
+        display: block;
+        z-index: 100;
+        color: var(--color3);
+        left: 80%;
+    }
 }
