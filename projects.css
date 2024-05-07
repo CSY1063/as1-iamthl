@@ -306,7 +306,7 @@ nav ul li{
     /* width: 70%; */
 }
 
-.project .popup-card .popup-img{
+.project .popup-card .popup-img1{
     z-index: 4;
     position: relative;
     /* display:flex; */
@@ -315,15 +315,15 @@ nav ul li{
     width: 49%;
     top: 50%;
     left: 26%;
-    background-image: url(img/web1.png); 
+    /* background-image: url(img/web1.png);  */
     background-size: 100% 100%;
     border-radius: 10px;
     transform: translate(-50%,-50%);
-    animation: slider 8s infinite linear;
+    animation: slider1 8s infinite linear;
 }
 
 
-@keyframes slider{
+@keyframes slider1{
     0%{
         background-image: url(img/web1.png); 
     }
@@ -332,6 +332,61 @@ nav ul li{
         background-image: url(img/web2.png);
     }
 }
+
+.project .popup-card .popup-img2{
+    z-index: 4;
+    position: relative;
+    /* display:flex; */
+    /* justify-content: center;
+    align-items: center; */
+    width: 49%;
+    top: 50%;
+    left: 26%;
+    background-image: url(img/project2.jpg); 
+    background-size: 100% 100%;
+    border-radius: 10px;
+    transform: translate(-50%,-50%);
+    animation: slider2 8s infinite linear;
+}
+
+
+@keyframes slider2{
+    0%{
+        background-image: url(img/project2.jpg); 
+    }
+
+    50%{
+        background-image: url(img/project2-2.jpg);
+    }
+}
+
+.project .popup-card .popup-img3{
+    z-index: 4;
+    position: relative;
+    /* display:flex; */
+    /* justify-content: center;
+    align-items: center; */
+    width: 49%;
+    top: 50%;
+    left: 26%;
+    background-image: url(img/project3.png); 
+    background-size: 100% 100%;
+    border-radius: 10px;
+    transform: translate(-50%,-50%);
+    animation: slider3 8s infinite linear;
+}
+
+
+@keyframes slider3{
+    0%{
+        background-image: url(img/project3.png); 
+    }
+
+    50%{
+        background-image: url(img/project3.png);
+    }
+}
+
 .project .popup-card .info{
     z-index: 4;
     background: #fff;
